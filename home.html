@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DemoApp" ng-controller="MyCtrl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino | Home</title>
+  <link rel="icon" href="img/LOGO/bk.jpg">
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="css/slick-1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="css/slick-1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/aos/dist/aos.css">
+  <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header-menu" id="myHeader">
+        <div class="menu-pc" data-aos="fade-right">
+            <nav>
+                <ul>
+                  <li>Sản phẩm</li>
+                  <li><a href="cart.html">Giỏ hàng</a></li>
+                  <li class="logo"><a href="home.html"><img src="img/LOGO/bk.jpg" alt=""></a></li>
+                  <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-mobile">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                           <div class="text-left">
+                            <btn id="click-menu" class="btn-click-menu">
+                                <i class="fas fa-bars " id="change-icon"></i>
+                            </btn>
+                           </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="text-center">
+                                <div class="m-logo">
+                                    <img src="img/LOGO/bk.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="text-right">
+                                <div class="m-bag pull-right">
+                                    <i class="fas fa-shopping-bag">
+                                        <a href="cart.html"></a>
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+        </div>
+                <div class="menu-moblie-demo" id="menu-demo">
+                    <nav>
+                    <ul>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="support.html">Trợ giúp</a></li>
+                    </ul>
+                </nav>
+                </div>
+                
+           
+        
+    </div>
+</div>
+  <div class="container">
+    <div class="row">
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+      <div class="banner" >
+
+        <div class="banner_slide">
+          <div>
+            <!-- content 1 -->
+            <img src="img/banner/hihi.jpg" alt="" width="100%">
+
+          </div>
+          <div>
+            <!-- content 2 -->
+            <img src="img/banner/hihi.jpg" alt="" width="100%">
+          </div>
+          <div>
+            <!-- content 4 -->
+            <img src="img/banner/hihi.jpg" alt="" width="100%">
+            <!-- <img src="img/banner/banner-1.png" alt=""> -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+  </div>
+  <div class="product-container">
+    <div class="container">
+      <div class="row">
+        <!-- open-item -->
+        <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat = "(key,value) in dataset">
+
+            <div class="product-item" data-aos="fade-up" data-toggle="modal" href='#modal_id'  ng-click="info(value)">
+              <img ng-src="{{value.product_image}}" >
+              <div class="product-detail">
+                <div class="product-name text-left">
+                  <!-- <span><?php echo $name?></span> -->
+                  <span>{{value.name}}</span>
+                </div>
+                <div class="triangle-left"></div> 
+                
+              </div>
+              
+            </div>
+        
+        </div>
+        <!-- end-item -->
+        
+        <div class="modal fade" id="modal_id">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title text-center">Detail of the food</h2>
+              </div>
+              <div class="modal-body">
+
+                  <div class="row">
+                    
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <img ng-src="{{detail.product_image}}" alt="" >
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <div class="product-name-modal text-left">
+                        <span><b>Name: {{detail.name}}</b></span>
+                        <span>Price: ${{detail.price}} </span>
+                        
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-color" onclick="location.href='cart.html'">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="css/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="css/aos/dist/aos.js"></script>
+  <script src="js/all.js"></script>
+</body>
+</html>

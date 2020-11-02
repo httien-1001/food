@@ -1,0 +1,75 @@
+[
+      {
+        "id": "1",
+        "name": "Hambuger",
+        "price": "75.00",
+        "product_image": "https://i.pinimg.com/564x/de/71/af/de71af61a3956ab4cb57a71d97784c96.jpg"
+      },
+      {
+            "id": "2",
+            "name": "Pizza",
+            "price": "30.00",
+            "product_image": "https://i.pinimg.com/236x/64/32/01/64320186ed337ecb2df3a51f311ad256.jpg"
+      },
+      {
+            "id": "3",
+            "name": "Bread",
+            "price": "55.00",
+            "product_image": "https://i.pinimg.com/236x/cf/af/e5/cfafe53900e80df6452ff9216f4e5a68.jpg"
+      },
+      {
+            "id": "4",
+            "name": "Fried Chicken",
+            "price": "55.00",
+            "product_image": "https://i.pinimg.com/236x/b2/bb/c5/b2bbc55680abcb7499f329d2e80519a1.jpg"
+      },
+      {
+            "id": "5",
+            "name": "Hambuger",
+            "price": "75.00",
+            "product_image": "https://i.pinimg.com/564x/de/71/af/de71af61a3956ab4cb57a71d97784c96.jpg"
+          },
+          {
+                "id": "6",
+                "name": "Pizza",
+                "price": "30.00",
+                "product_image": "https://i.pinimg.com/236x/64/32/01/64320186ed337ecb2df3a51f311ad256.jpg"
+          },
+          {
+                "id": "7",
+                "name": "Bread",
+                "price": "55.00",
+                "product_image": "https://i.pinimg.com/236x/cf/af/e5/cfafe53900e80df6452ff9216f4e5a68.jpg"
+          },
+          {
+                "id": "8",
+                "name": "Fried Chicken",
+                "price": "55.00",
+                "product_image": "https://i.pinimg.com/236x/b2/bb/c5/b2bbc55680abcb7499f329d2e80519a1.jpg"
+          },
+          {
+            "id": "9",
+            "name": "Hambuger",
+            "price": "75.00",
+            "product_image": "https://i.pinimg.com/564x/de/71/af/de71af61a3956ab4cb57a71d97784c96.jpg"
+          },
+          {
+                "id": "10",
+                "name": "Pizza",
+                "price": "30.00",
+                "product_image": "https://i.pinimg.com/236x/64/32/01/64320186ed337ecb2df3a51f311ad256.jpg"
+          },
+          {
+                "id": "11",
+                "name": "Bread",
+                "price": "55.00",
+                "product_image": "https://i.pinimg.com/236x/cf/af/e5/cfafe53900e80df6452ff9216f4e5a68.jpg"
+          },
+          {
+                "id": "12",
+                "name": "Fried Chicken",
+                "price": "55.00",
+                "product_image": "https://i.pinimg.com/236x/b2/bb/c5/b2bbc55680abcb7499f329d2e80519a1.jpg"
+          }    
+      
+]
