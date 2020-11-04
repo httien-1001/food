@@ -99,5 +99,75 @@ app.controller('MyCtrl', function($scope,$http){
     alert('Thong tin dang nhap khong hop le');
     
   };
+  // localStorage.setItem(key,value);
+  // localStorage.getItem('cart')
+  // angular.fromJson();
+  // angular.toJson();
+  
+  // check xem ton tai gio hang chua
+  if (localStorage.getItem('giohang')!= null){
+    $scope.giohang=angular.fromJson(localStorage.getItem('giohang'));
+  } else {
+    $scope.giohang=[];
+  }
+  // localStorage.getItem('cart')
+  $scope.addCart =function (data) { 
+    // alert(data);
+    let check = checkPro(data.id,$scope.giohang);
+    console.log(data.id);
+    if (check == -1){
+      data.quantity=1;
+      $scope.giohang.push(data);
+      console.log($scope.giohang);
+    } else {
+      $scope.giohang[index].quantity +=1;
+      console.log($scope.giohang);
+    };
+
+    var item=angular.toJson($scope.giohang);
+    localStorage.setItem('giohang',item);
+    
+    $scope.giohang=angular.fromJson(localStorage.getItem('giohang'))
+
+  
+
+   };
+  //  check sp trong giohang
+  function checkPro(id,cart){
+    for ( index = 0; index < cart.length; index++) {
+      // const element = array[index];
+      if(id == cart[index].id){
+        return index;
+      }
+    }
+    return -1;
+  }
+  $scope.increaseQuantity = function (id,quantity) { 
+    console.log(quantity);
+    $scope.giohang[id].quantity = quantity +1;
+
+    let giohagn_update= angular.toJson($scope.giohang);
+
+    localStorage.setItem('giohang',giohagn_update);
+
+  };
+  $scope.decreaseQuantity = function (id,quantity) { 
+    
+    if ($scope.giohang[id].quantity > 1){
+      $scope.giohang[id].quantity = quantity -1;
+    } else {
+      $scope.giohang[id].quantity = 0;
+    }
+    
+    console.log(quantity);
+    let giohagn_update= angular.toJson($scope.giohang);
+
+    localStorage.setItem('giohang',giohagn_update);
+
+  };
+  $scope.deletePro=function(key) {
+    $scope.giohang.splice(key,1);
+    localStorage.setItem('giohang',$scope.giohang);
+  }
 });
 

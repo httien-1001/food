@@ -19,7 +19,7 @@
         <div class="menu-pc" data-aos="fade-right">
             <nav>
                 <ul>
-                  <li>Sản phẩm</li>
+                  <li><a href="product.html">Sản phẩm</a></li>
                   <li><a href="cart.html">Giỏ hàng</a></li>
                   <li class="logo"><a href="home.html"><img src="img/LOGO/bk.jpg" alt=""></a></li>
                   <li><a href="about.html">Về chúng tôi</a></li>
@@ -96,64 +96,7 @@
     
     </div>
   </div>
-  <div class="product-container">
-    <div class="container">
-      <div class="row">
-        <!-- open-item -->
-        <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat = "(key,value) in dataset">
-
-            <div class="product-item" data-aos="fade-up" data-toggle="modal" href='#modal_id'  ng-click="info(value)">
-              <img ng-src="{{value.product_image}}" >
-              <div class="product-detail">
-                <div class="product-name text-left">
-                  <!-- <span><?php echo $name?></span> -->
-                  <span>{{value.name}}</span>
-                </div>
-                <div class="triangle-left"></div> 
-                
-              </div>
-              
-            </div>
-        
-        </div>
-        <!-- end-item -->
-        
-        <div class="modal fade" id="modal_id">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="modal-title text-center">Detail of the food</h2>
-              </div>
-              <div class="modal-body">
-
-                  <div class="row">
-                    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                      <img ng-src="{{detail.product_image}}" alt="" >
-                    </div>
-                    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                      <div class="product-name-modal text-left">
-                        <span><b>Name: {{detail.name}}</b></span>
-                        <span>Price: ${{detail.price}} </span>
-                        
-                      </div>
-                    </div>
-
-                </div>
-              </div>
-              <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-color" onclick="location.href='cart.html'">Add to cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+  
 
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   <script src="https://code.jquery.com/jquery.js"></script>
