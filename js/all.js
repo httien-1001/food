@@ -169,5 +169,22 @@ app.controller('MyCtrl', function($scope,$http){
     $scope.giohang.splice(key,1);
     localStorage.setItem('giohang',$scope.giohang);
   }
+  $scope.sum = function(){
+    var total = 0;
+    angular.forEach($scope.giohang, function(value) {
+      total += (parseFloat(value.price) * value.quantity);
+      console.log($scope.giohang);
+    });
+    console.log(total);
+    return total;
+
+    // let giohang_total_price = angular.toJson($scope.giohang)
+    // localStorage.setItem('$scope.',giohang_total_price);
+    // console.log(total);
+
+    // return tong;
+    
+  };
+    
 });
 

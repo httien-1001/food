@@ -71,48 +71,37 @@
     <div class="cart">
         <!-- <img src="https://i.pinimg.com/564x/ec/11/4b/ec114b7a01e3dc7e7b552eac54b463bc.jpg" alt=""> -->
         <div class="cart-body">
-            <table class="table cus-table table-hover">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Single Price</th>
-                        <th>Total Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{$index+1}}</td>
-                        <td>Hambuger</td>
-                        <td>1</td>
-                        <td>$ 75.00</td>
-                        <td>$ 75.00</td>
-                    </tr>
-                    <tr>
-                        <td>{{$index+2}}</td>
-                        <td>Pizza</td>
-                        <td>1</td>
-                        <td>$ 35.00</td>
-                        <td>$ 35.00</td>
-                    </tr>
-                </tbody>
+            
+            <table class="table table_cus">
+                <tr>
+                    <td></td>
+                    <td>No.</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total Price</td>
+                </tr>
+                <tr ng-repeat="(key,value) in giohang" class="tr_custom"> 
+                    <!-- repeat to display cart -->
+                    <td><button class="btn" ng-click = "deletePro(key)">x</button></td>
+                    <td>{{key+1}}</td>
+                    <td>{{value.name}}</td>
+                    <td>{{value.price}}</td>
+                    <td>
+                      <button class="btn " ng-click="decreaseQuantity(key,value.quantity)">-</button>
+                      {{value.quantity}} 
+                      <button class="btn" ng-click="increaseQuantity(key,value.quantity)">+</button>
+                    </td>
+                    <td>{{value.price * value.quantity }} </td>
+                </tr>
             </table>
             <table class="table ">
                 <tr>
-                    <td>Total Product Price</td>
+                    <td>Total  Price</td>
                     
-                    <td>$ 75.00</td>
+                    <td>{{sum()}}</td>
                 </tr>
-                <tr>
-                    <td>Shipping Price</td>
-                    
-                    <td>$ 5.00</td>
-                </tr>
-                <tr>
-                    <td>Final Price (including shipping fee)</td>
-                    <td>$ 80.00</td>
-                </tr>
+                
             </table>
             
         </div>
